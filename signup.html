@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h2>Signup</h2>
+    <form action="process_signup.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+
+        <label for="region">Region:</label>
+        <input type="text" id="region" name="region" list="regions" required>
+        <datalist id="regions">
+            <!-- List of Tanzanian regions -->
+            <option value="Arusha">
+            <option value="Dar es Salaam">
+            <option value="Dodoma">
+            <!-- Add more regions as needed -->
+        </datalist>
+        <br>
+        <input type="submit" value="Signup">
+
+        <p>Already registered? <a href="index.html">Login here</a></p>
+    </form>
+    </div>
+
+    <div class="footer">
+        &copy; <?php echo date("Y"); ?> citi
+    </div>
+    
+</body>
+</html>

@@ -1,5 +1,5 @@
 <?php
-// Include your database connection file
+// database connection file
 include_once("db_connection.php");
 
 // Check if the query_id is set in the URL
@@ -13,7 +13,7 @@ if (isset($_GET['query_id'])) {
     if ($query_details_result->num_rows > 0) {
         $query_details = $query_details_result->fetch_assoc();
 
-        // Fetch response details
+        // Fetch all responses for the given query
         $response_query = "SELECT * FROM responses WHERE query_id = $query_id";
         $response_result = $conn->query($response_query);
 
@@ -44,11 +44,11 @@ if (isset($_GET['query_id'])) {
     <div class="container">
         <div class="sidenav">
             <!-- Navigation links go here -->
-            <a href="dashboard.php">Home</a> <br>
+            <a href="dashboard.php">Profile</a> <br>
             <a href="new_queries.php">New Queries</a><br>
             <a href="display_queries.php">Display Queries</a><br>
-            <!-- Add more links as needed -->
             <p><a href="logout.php">Logout</a></p>
+            <a href="index.html">Home</a> <br>
         </div>
 
         <div class="main-content">
@@ -65,8 +65,9 @@ if (isset($_GET['query_id'])) {
             <!-- Display response details -->
             <?php if ($response_result->num_rows > 0): ?>
                 <div class="response-details">
-                    <?php $response = $response_result->fetch_assoc(); ?>
-                    <p><?php echo $response['response_text']; ?></p>
+                    <?php while ($response = $response_result->fetch_assoc()): ?>
+                        <p><?php echo $response['response_text']; ?></p>
+                    <?php endwhile; ?>
                 </div>
             <?php else: ?>
                 <p>No response available for this query.</p>

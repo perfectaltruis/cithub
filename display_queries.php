@@ -45,8 +45,7 @@ $conn->close();
     <title>Display Queries with Tabs</title>
     <link rel="stylesheet" type="text/css" href="querydisplay.css">
     <style>
-        /* Add tab styling here */
-        .tab {
+       .tab {
             cursor: pointer;
             padding: 10px;
             margin-right: 10px;
@@ -55,7 +54,7 @@ $conn->close();
         }
     </style>
     <script>
-        // JavaScript for tab functionality
+        // tab functionality
         function showCategory(category) {
             // Hide all queries
             var querySections = document.getElementsByClassName("category-section");
@@ -63,7 +62,7 @@ $conn->close();
                 querySections[i].style.display = "none";
             }
 
-            // Show queries for the selected category
+            // queries for the selected category
             var selectedCategorySection = document.getElementById("category-section-" + category);
             if (selectedCategorySection) {
                 selectedCategorySection.style.display = "block";
@@ -74,20 +73,16 @@ $conn->close();
 <body>
     <div class="container">
         <div class="sidenav">
-            <!-- Navigation links go here -->
-        
-            <a href="dashboard.php">Home</a> <br>
+            <a href="dashboard.php">Profile</a> <br>
             <a href="new_queries.php">New Queries</a><br>
-            <a href="display_queries.php">Display Queries</a><br>
-            <!-- Add more links as needed -->
-            <p><a href="logout.php">Logout</a></p>
+            <a href="logout.php">Logout</a><br>
+
+            <a href="index.html">Home</a><br>
         </div>
-     
 
         <div class="main-content">
             <h2>Queries by Category</h2>
-
-            <!-- Tabs for each category -->
+	     <p class="info">To see citizen issues including your please click any tab below</p>
             <div class="tab" onclick="showCategory('All')">All</div>
             <?php foreach ($categories as $categoryItem): ?>
                 <div class="tab" onclick="showCategory('<?php echo $categoryItem['category']; ?>')">
@@ -110,7 +105,6 @@ $conn->close();
                         <div class="query-item">
                             <h4><?php echo $query['title']; ?></h4>
                             <p><?php echo $query['description']; ?></p>
-                            <!-- Additional query details can be displayed here -->
                             <a href="view_response.php?query_id=<?php echo $query['id']; ?>" class="view_response-btn">View Response</a>
                         </div>
                     <?php endforeach; ?>
@@ -120,7 +114,7 @@ $conn->close();
         </div>
     </div>
     <div class="footer">
-        &copy; <?php echo date("Y"); ?> 
+        &copy; <?php echo date("Y"); ?> web technologies: All right reserved.
     </div>
 </body>
 </html>

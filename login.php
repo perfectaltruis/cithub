@@ -110,5 +110,7 @@
     <div>
         <p>Not registered yet? <a href="signup.html">Signup here</a></p>
     </div>
+    <div class="footer">
+    </div>
 </body>
 </html>

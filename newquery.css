@@ -1,0 +1,98 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.sidenav {
+    width: 100px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    left: 10px;
+    top: 0;   
+    bottom: 0;
+}
+
+.sidenav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.sidenav a:hover {
+    color: #00bcd4;
+}
+
+.main-content {
+    margin-left: 140px; /* Adjusted */
+    flex: 1;
+}
+
+.main-container {
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.query-form label {
+    font-weight: bold;
+}
+
+.query-form input[type="text"],
+.query-form textarea,
+.query-form select {
+    width: calc(100% - 20px); /* Updated */
+    max-width: 100%; /* Added max-width */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.query-form input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.query-form input[type="submit"]:hover {
+    background-color: white;
+    border: 1px teal solid;
+    color: teal;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}

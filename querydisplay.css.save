@@ -1,4 +1,4 @@
-     /* Resetting default margin and padding */
+    /* Resetting default margin and padding */
         * {
             margin: 0;
             padding: 0;
@@ -46,7 +46,7 @@
 
         .main-content {
             flex: 1;
-            margin-left: 150px;
+            margin-left: 100px;
         }
 
         .tab {
@@ -57,12 +57,7 @@
             border-radius: 5px;
             display: inline-block;
         }
-	
-	.info{
-	color: teal;
-	margin: 45px;
-	padding: 20px;
-	}
+
         .category-section {
             margin-top: 20px;
         }

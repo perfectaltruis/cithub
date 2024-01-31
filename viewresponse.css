@@ -15,10 +15,11 @@ body {
 }
 
 .sidenav {
-    width: 200px;
-    padding: 20px;
+    width: 150px;
+    padding: 10px;
     background-color: #333;
     color: #fff;
+    left: 0;
 }
 
 .sidenav a {

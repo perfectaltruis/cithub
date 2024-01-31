@@ -3,77 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Index Page</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
 
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            text-align: center;
-        }
+.container {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    margin: 50px auto;
+    max-width: 400px;
+}
 
-        .container h2 {
-            margin-bottom: 20px;
-        }
+.container h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
 
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+.container p {
+    color: #666;
+    margin-bottom: 20px;
+}
 
-        label {
-            margin: 10px 0;
-        }
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-        input {
-            padding: 10px;
-            margin-bottom: 15px;
-        }
+ul li {
+    margin-bottom: 15px;
+}
 
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-            color: #555;
-        }
+ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+ul li a:hover {
+    color: #0056b3;
+}
+
+.footer {
+    text-align: center;
+    color: #777;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: center;
+    color: crimson !important;
+    margin-top: 40px;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+}	
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Login</h2>
-        <form action="process_login.php" method="post">
-            <label for="username">Username:</label>
-            <input type="text" name="username" required>
+        <h1>WEB TECHNOLOGIES CYU 07316.</h1>
+	<h2>Citizen Forum</h2>
+        <p>Please login or register to continue</p>
+        <ul>
+            <li><a href="process_login.php">Login</a></li>
+            <li><a href="process_signup.php">Register</a></li>
+        </ul>
 
-            <label for="password">Password:</label>
-            <input type="password" name="password" required>
+	<p><tt>Are you a representative? </tt><i><a href="representativeloginpage.php"> Login </a></i> Here</p>
 
-            <input type="submit" value="Login">
-        </form>
     </div>
-
-    <div>
-        <p>Not registered yet? <a href="signup.html">Signup here</a></p>
-    </div>
-
-    <p>Are you a representative of the people? <a href="signup.php">Sign up Here</a></p>
-
-    <div class="footer">
-        &copy; <?php echo date("Y"); ?> 
-    </div>
+  <footer class="footer">
+        <p&copy; style="color: tan">2024 Web technologies. All rights reserved.</p>
+    </footer>
 </body>
 </html>

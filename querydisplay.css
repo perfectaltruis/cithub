@@ -1,0 +1,76 @@
+/* querydisplay.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+}
+
+.sidenav {
+    height: 100vh;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    overflow-y: auto; /* Add a scrollbar if needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidenav a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sidenav a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #eee;
+}
+
+.tab:hover {
+    background-color: #ddd;
+}
+
+.category-section {
+    display: none;
+}
+
+.query-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
